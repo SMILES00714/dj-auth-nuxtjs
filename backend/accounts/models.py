@@ -3,7 +3,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
-from . import managers
+from accounts.managers import CustomUserManager
 
 NULL_AND_BLANK = {'null': True, 'blank': True}
 
@@ -37,7 +37,7 @@ class CustomUser(AbstractUser):
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
 
-    objects = managers.CustomUserManager()
+    objects = CustomUserManager()
 
     class Meta:
         verbose_name_plural = 'accounts'
