@@ -17,3 +17,6 @@ class CustomUserModelViewSet(viewsets.ModelViewSet):
         instance = serializer.save()
         instance.set_password(instance.password)
         instance.save()
+
+
+customuser_model_viewsets = CustomUserModelViewSet
