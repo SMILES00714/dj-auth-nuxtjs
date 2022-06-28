@@ -17,3 +17,6 @@ class UserRetrieveUpdateDestroyAPIView(
 
     def get_object(self):
         return self.request.user
+
+
+user_retrieve_update_destroy = UserRetrieveUpdateDestroyAPIView.as_view()
